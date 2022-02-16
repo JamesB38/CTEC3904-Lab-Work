@@ -294,7 +294,7 @@ object ListDemo1 {
     println("Un-comment the exercise methods in main() one at a time.")
     println("Complete the individual methods as you attempt each question.")
     println("You may wish to keep notes as you go along for future reference.")
-//    exerciseListDemo1_1()
+    exerciseListDemo1_1()
 //    exerciseListDemo1_2()
 //    exerciseListDemo1_3()
 //    exerciseListDemo1_4()
