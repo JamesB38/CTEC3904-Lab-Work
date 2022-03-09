@@ -2,9 +2,23 @@ package demo.list
 
 object ListDemo1 {
 
+  def main(args: Array[String]): Unit = {
+//    println("Un-comment the exercise methods in main() one at a time.")
+//    println("Complete the individual methods as you attempt each question.")
+//    println("You may wish to keep notes as you go along for future reference.")
+    //exerciseListDemo1_1()
+    //exerciseListDemo1_2()
+        exerciseListDemo1_3()
+    //    exerciseListDemo1_4()
+    //    exerciseListDemo1_5()
+    //    exerciseListDemo1_6()
+    //    exerciseListDemo1_7()
+    //    exerciseListDemo1_8()
+  }
+
   /*
    * These exercises have been grouped by question so that in main() it is possible to un-comment
-   * one question at a time. The experiements and the display of their results are contained within
+   * one question at a time. The experiments and the display of their results are contained within
    * individual methods for each question. This makes it easier to manage a large number of
    * individual definitions and to introduce them incrementally.
    */
@@ -27,18 +41,18 @@ object ListDemo1 {
    */
 
   def exerciseListDemo1_1() {
-//    val a = ???
-//    val b = ???
-//    val c = ???
-//    val d = ???
-//    val e = ???
-//    val f = ???
-//    println(a)
-//    println(b)
-//    println(c)
-//    println(d)
-//    println(e)
-//    println(f)
+    val a = wordList.head
+    val b = wordList.tail.head
+    val c = wordList.tail.tail.tail.tail.tail.tail.tail.tail.head
+    val d = wordList.init.init.init.init.init.init.init.init.last
+    val e = wordList.init.last
+    val f = wordList.last
+    println(a)
+    println(b)
+    println(c)
+    println(d)
+    println(e)
+    println(f)
   }
 
 
@@ -53,21 +67,24 @@ object ListDemo1 {
    * (d) (List(0, 1, 2, 3), List(4, 5, 6, 7, 8, 9))
    * (e) (List(0, 1, 2, 3, 4, 5, 6, 7, 8), List(9))
    * (f) (List(), List(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+   *
+   * List("The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog")
+   *
    */
 
   def exerciseListDemo1_2() {
-//    val a = ???
-//    val b = ???
-//    val c = ???
-//    val d = ???
-//    val e = ???
-//    val f = ???
-//    println(a)
-//    println(b)
-//    println(c)
-//    println(d)
-//    println(e)
-//    println(f)
+    val a = charList.drop(23) ::: charList.take(4)
+    val b = intList.drop(9) ::: intList.take(1)
+    val c = wordList.drop(5) ::: wordList.drop(4).take(1) ::: wordList.take(4)
+    val d = intList.splitAt(4)
+    val e = intList.splitAt(9)
+    val f = intList.splitAt(0)
+    println(a)
+    println(b)
+    println(c)
+    println(d)
+    println(e)
+    println(f)
   }
 
   /*
@@ -87,24 +104,24 @@ object ListDemo1 {
    *          List(d, o, g))
    */
   def exerciseListDemo1_3() {
-//    val a = ???
-//    val b = ???
-//    val c = ???
-//    val d = ???
-//    val e = ???
-//    val f = ???
-//    val g = ???
-//    val h = ???
-//    val i = ???
-//    println(a)
-//    println(b)
-//    println(c)
-//    println(d)
-//    println(e)
-//    println(f)
-//    println(g)
-//    println(h)
-//    println(i)
+    val a = intList.map(i => i * 2)
+    val b = intList.map(i => (i * 2) + 1)
+    val c = intList.map(i => if (i < 5) i else 5)
+    val d = intList.map(i => 9 - i)
+    val e = intList.map(i => (i + 97).toChar)
+    val f = intList.map(i => wordList(i % 9))
+    //val g = intList.map(i => )
+    val h = wordList.map(i => i.toUpperCase())
+    val i = wordList.map(i => i.toList)
+    println(a)
+    println(b)
+    println(c)
+    println(d)
+    println(e)
+    println(f)
+    //println(g)
+    println(h)
+    println(i)
   }
 
 
@@ -290,17 +307,5 @@ object ListDemo1 {
 //    println(msort(rs).mkString)
   }
 
-  def main(args: Array[String]): Unit = {
-    println("Un-comment the exercise methods in main() one at a time.")
-    println("Complete the individual methods as you attempt each question.")
-    println("You may wish to keep notes as you go along for future reference.")
-    exerciseListDemo1_1()
-//    exerciseListDemo1_2()
-//    exerciseListDemo1_3()
-//    exerciseListDemo1_4()
-//    exerciseListDemo1_5()
-//    exerciseListDemo1_6()
-//    exerciseListDemo1_7()
-//    exerciseListDemo1_8()
-  }
+
 }
